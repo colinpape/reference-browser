@@ -6,10 +6,22 @@ A customized web browser based on [Mozilla's Reference Browser](https://github.c
 
 This is a fork for the Savedd Christian search engine project. The primary customization is setting Savedd as the default search engine and applying basic branding.
 
+## App Icon
+
+Master icon: gold Christian cross inside a magnifying glass on a dark burgundy background (1024×1024).
+
+To apply it:
+1. Replace the existing launcher icons in `app/src/main/res/mipmap-*/` with the generated sizes (mdpi 48, hdpi 72, xhdpi 96, xxhdpi 144, xxxhdpi 192).
+2. Update the adaptive icon background if desired (the project currently uses `ic_icon_background.png` + `ic_icon_foreground.xml`).
+3. Provide a 512×512 version for the Play Store listing.
+
+The master icon and generated sizes can be downloaded and dropped into the res folders.
+
 ## Status
 
 - Forked from mozilla-mobile/reference-browser
-- Next steps: Implement custom SearchEngine for Savedd and set as default via SearchMiddleware / BrowserStore
+- Savedd set as default search engine
+- Basic branding applied
 
 ## Building
 
