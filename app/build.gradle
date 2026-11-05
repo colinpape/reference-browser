@@ -94,7 +94,7 @@ androidComponents {
 
 android {
     defaultConfig {
-        applicationId "org.mozilla.reference.browser"
+        applicationId "com.savedd.browser"
         buildToolsVersion Config.buildToolsVersion
         compileSdk {
             version = release(Config.compileSdkMajorVersion) {
@@ -158,7 +158,7 @@ android {
         }
     }
 
-    namespace = 'org.mozilla.reference.browser'
+    namespace = 'com.savedd.browser'
 }
 
 kotlin {
