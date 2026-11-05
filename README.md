@@ -1,4 +1,25 @@
-#  Reference Browser
+# Savedd Browser (Fork of Mozilla Reference Browser)
+
+A customized web browser based on [Mozilla's Reference Browser](https://github.com/mozilla-mobile/reference-browser) using Android Components and GeckoView.
+
+**Goal**: MVP browser with **Savedd** as the default (and preferred) search engine.
+
+This is a fork for the Savedd Christian search engine project. The primary customization is setting Savedd as the default search engine and applying basic branding.
+
+## Status
+
+- Forked from mozilla-mobile/reference-browser
+- Next steps: Implement custom SearchEngine for Savedd and set as default via SearchMiddleware / BrowserStore
+
+## Building
+
+Follow the original Reference Browser build instructions. Open in Android Studio and build the app module.
+
+See the original README below for full details on dependencies, local development, etc.
+
+---
+
+# Original Reference Browser README
 
 [![Task Status](https://firefox-ci-tc.services.mozilla.com/api/github/v1/repository/mozilla-mobile/reference-browser/main/badge.svg)](https://firefox-ci-tc.services.mozilla.com/tasks/index/mobile.v2.reference-browser.nightly.latest) [![chat.mozilla.org](https://img.shields.io/badge/chat-on%20matrix-51bb9c)](https://chat.mozilla.org/#/room/#android-components:mozilla.org)
 
