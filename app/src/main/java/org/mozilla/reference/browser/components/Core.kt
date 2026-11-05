@@ -36,7 +36,6 @@ import mozilla.components.feature.prompts.file.FileUploadsDirCleaner
 import mozilla.components.feature.pwa.ManifestStorage
 import mozilla.components.feature.pwa.WebAppShortcutManager
 import mozilla.components.feature.readerview.ReaderViewMiddleware
-import mozilla.components.feature.search.middleware.SearchMiddleware
 import mozilla.components.feature.search.region.RegionMiddleware
 import mozilla.components.feature.session.HistoryDelegate
 import mozilla.components.feature.sitepermissions.OnDiskSitePermissionsStorage
@@ -58,6 +57,7 @@ import org.mozilla.reference.browser.downloads.DownloadService
 import org.mozilla.reference.browser.ext.components
 import org.mozilla.reference.browser.ext.getPreferenceKey
 import org.mozilla.reference.browser.media.MediaSessionService
+import org.mozilla.reference.browser.search.SaveddSearchMiddleware
 import org.mozilla.reference.browser.settings.Settings
 
 private const val DAY_IN_MINUTES = 24 * 60L
@@ -118,7 +118,8 @@ class Core(
                             LocationService.default(),
                             applicationScope = applicationScope,
                         ),
-                        SearchMiddleware(context),
+                        // Savedd is forced as the default search engine
+                        SaveddSearchMiddleware(context),
                         RecordingDevicesMiddleware(context, context.components.notificationsDelegate),
                     ) + EngineMiddleware.create(engine),
             )
