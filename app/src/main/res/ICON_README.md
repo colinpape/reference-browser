@@ -2,9 +2,16 @@
 
 Master icon: gold Christian cross inside a magnifying glass on dark burgundy (#2C0812).
 
-## Files to add
+## Quick start
 
-Place these in the corresponding mipmap folders (generated sizes):
+The launcher icons are committed as base64 so they can be stored in Git. To decode them into real PNGs:
+
+```bash
+cd app/src/main/res
+bash decode_icons.sh
+```
+
+This creates:
 
 - `mipmap-mdpi/ic_launcher.png` (48x48)
 - `mipmap-hdpi/ic_launcher.png` (72x72)
@@ -12,8 +19,8 @@ Place these in the corresponding mipmap folders (generated sizes):
 - `mipmap-xxhdpi/ic_launcher.png` (144x144)
 - `mipmap-xxxhdpi/ic_launcher.png` (192x192)
 
-Also provide a 512x512 version for the Play Store listing.
+A 512x512 Play Store icon can also be decoded if `play_store_icon.b64` is present.
 
-The master 1024x1024 source is available as savedd_cross_v3.png from the project conversation.
+The project currently uses adaptive icons (`ic_icon_background.png` + `ic_icon_foreground.xml`). After decoding, you can replace the background PNGs or switch the launcher to use these simple `ic_launcher.png` files.
 
-The project currently uses adaptive icons (`ic_icon_background.png` + `ic_icon_foreground.xml`). You can replace the background PNGs or switch to a simple launcher icon setup.
+The master 1024x1024 source is in the iOS repo (Assets/AppIcon-1024.b64) and can be decoded there.
